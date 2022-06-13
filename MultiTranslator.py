@@ -71,7 +71,7 @@ class App:
                     try:
                         translation = translator.translate(self.editL.toPlainText(),src=self.actualLanguage,dest=lang)
                         self.transL.append(lang+": "+translation.text)
-                    except: return
+                    except: pass
 
     def SetDestLang(self,var2):
             self.destLanguage = var2[0]+var2[1]
