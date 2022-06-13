@@ -81,6 +81,7 @@ class App:
         for i in googletrans.LANGUAGES:
             self.AllMultiLangList.insert(index,i+" = "+str( googletrans.LANGUAGES.get(i) ))
             index+=1
+        self.AllMultiLangList.sort()
     def Window(self):
 
         
