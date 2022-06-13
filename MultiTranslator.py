@@ -106,13 +106,13 @@ class App:
         label = QtWidgets.QLabel(win)
         label.setText("Translated text: ")
         label.adjustSize()
-        label.move(450,90)
+        label.move(455,90)
         label.setStyleSheet(textColor)
         #text
         label = QtWidgets.QLabel(win)
-        label.setText("Multi translate languages: ")
+        label.setText("Languages for multi-translate: ")
         label.adjustSize()
-        label.move(280,90)
+        label.move(270,90)
         label.setStyleSheet(textColor)
         #text
         label = QtWidgets.QLabel(win)
@@ -127,7 +127,7 @@ class App:
         self.editL.adjustSize()
         #typeL.setMaximumWidth(55) #adjustSize()
         #self.editL.textChanged.connect(self.Translate)
-        self.editL.move(15,120)
+        self.editL.move(10,120)
         self.editL.setStyleSheet(textColor+
         "border: 2px solid #737373;"+
         "background: #211f1f;"+
@@ -139,7 +139,7 @@ class App:
         self.transL.adjustSize()
         self.transL.setReadOnly(True)
         #typeL.setMaximumWidth(55) #adjustSize()
-        self.transL.move(450,120)
+        self.transL.move(455,120)
         self.transL.setStyleSheet(textColor+
         "border: 2px solid #737373;"+
         "background: #211f1f;"+
@@ -150,8 +150,8 @@ class App:
         self.multiTransL = QtWidgets.QTextEdit(win)
         self.multiTransL.adjustSize()
         #typeL.setMaximumWidth(55) #adjustSize()
-        self.multiTransL.setMaximumWidth(120)
-        self.multiTransL.move(300,120)
+        self.multiTransL.setMaximumWidth(180)
+        self.multiTransL.move(270,120)
         self.multiTransL.setStyleSheet(textColor+
         "border: 2px solid #737373;"+
         "background: #211f1f;"+
