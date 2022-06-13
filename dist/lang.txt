@@ -1,0 +1,2 @@
+pl = polish,en = english,de = german
+en = english,pl = polish,de = german
