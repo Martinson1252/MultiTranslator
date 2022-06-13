@@ -1,6 +1,6 @@
 # MultiTranslator
 
-It's a simple program to translate multiple languages.  
+It's a simple program to translate multiple languages created in Python.  
 It uses PyQt5 and googletrans library.  
 Program is compiled to exe (located in dist\Multitranslator\Multitranslator.exe)  
 
