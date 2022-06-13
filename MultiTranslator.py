@@ -49,6 +49,7 @@ class App:
         f.close()
 
     def Translate(self):
+        if self.editL.toPlainText()=="": return
         print(self.multiTranslateBool)
         self.transL.setText("")
         translator = Translator()
@@ -61,9 +62,10 @@ class App:
 
     def MultiTranslate(self):
         self.transL.setText("")
+        if self.editL.toPlainText()=="": return
         translator = Translator()
         for lang in list( self.multiTransL.toPlainText().split() ):
-            if(len(lang)==2):
+            if(len(lang)==2 or len(lang)==3 or len(lang)==5 and lang[2]=="-"):
                 print(lang)
                 if lang not in self.transL.toPlainText():
                     translation = translator.translate(self.editL.toPlainText(),src=self.actualLanguage,dest=lang)
@@ -81,7 +83,7 @@ class App:
         for i in googletrans.LANGUAGES:
             self.AllMultiLangList.insert(index,i+" = "+str( googletrans.LANGUAGES.get(i) ))
             index+=1
-        self.AllMultiLangList.sort()
+        #self.AllMultiLangList.sort()
     def Window(self):
 
         
