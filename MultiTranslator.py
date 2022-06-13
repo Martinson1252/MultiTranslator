@@ -68,8 +68,10 @@ class App:
             if(len(lang)==2 or len(lang)==3 or len(lang)==5 and lang[2]=="-"):
                 print(lang)
                 if lang not in self.transL.toPlainText():
-                    translation = translator.translate(self.editL.toPlainText(),src=self.actualLanguage,dest=lang)
-                    self.transL.append(lang+": "+translation.text)
+                    try:
+                        translation = translator.translate(self.editL.toPlainText(),src=self.actualLanguage,dest=lang)
+                        self.transL.append(lang+": "+translation.text)
+                    except: return
 
     def SetDestLang(self,var2):
             self.destLanguage = var2[0]+var2[1]
