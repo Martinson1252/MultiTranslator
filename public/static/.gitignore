@@ -1,4 +1,2 @@
 *.html
-*.tex
-*.toc
-*.dll
+!spec/*.html
