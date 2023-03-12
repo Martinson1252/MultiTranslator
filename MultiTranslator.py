@@ -14,7 +14,7 @@ from PyQt5.QtGui import QCursor
 import sys
 from googletrans import Translator
 import os
-
+from threading import Thread
 import googletrans
 
 
@@ -69,8 +69,8 @@ class App:
                 print(lang)
                 if lang not in self.transL.toPlainText():
                     try:
-                        translation = translator.translate(self.editL.toPlainText(),src=self.actualLanguage,dest=lang)
-                        self.transL.append(lang+": "+translation.text)
+                        t = Thread(target=lambda: self.transL.append(lang+": "+((translator.translate(self.editL.toPlainText(),src=self.actualLanguage,dest=lang)).text) ))
+                        t.start()
                     except: pass
 
     def SetDestLang(self,var2):
