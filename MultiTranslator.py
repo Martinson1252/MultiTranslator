@@ -7,13 +7,13 @@ from msilib.schema import File
 from operator import contains
 from os import system
 from stat import filemode
-from PyQt5 import QtWidgets,QtCore
-from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QApplication,QMainWindow,QFileDialog
-from PyQt5.QtGui import QCursor
+from PySide6 import QtWidgets,QtCore
+from PySide6.QtCore import Qt
+from PySide6.QtWidgets import QApplication,QMainWindow,QFileDialog
+from PySide6.QtGui import QCursor
 import sys
 from googletrans import Translator
-import os
+import os,time
 from threading import Thread
 import googletrans
 
@@ -70,6 +70,7 @@ class App:
                 if lang not in self.transL.toPlainText():
                     try:
                         t = Thread(target=lambda: self.transL.append(lang+": "+((translator.translate(self.editL.toPlainText(),src=self.actualLanguage,dest=lang)).text) ))
+                        time.sleep(0.120)
                         t.start()
                     except: pass
 
@@ -228,7 +229,7 @@ class App:
 
         win.setWindowTitle("Translate")
         win.show()
-        sys.exit(app.exec_())
+        sys.exit(app.exec())
         
 
 

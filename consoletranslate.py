@@ -1,4 +1,4 @@
-import googletrans
+import googletrans,time
 from googletrans import Translator
 from threading import Thread
 
@@ -23,6 +23,7 @@ class Translate:
             translator = Translator()
             for lang in ( self.AllMultiLangList ):
                 t = Thread(target = lambda: print( (translator.translate(self.textToTranslate,src="pl",dest=lang.split()[0])).text ) )
+                time.sleep(0.120)
                 t.start()    
 trans = Translate()
 trans.MultiTranslate()
