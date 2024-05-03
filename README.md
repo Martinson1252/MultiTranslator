@@ -1,7 +1,7 @@
 # MultiTranslator
 
 A simple multi-language translation program written in Python.   
-It uses PySide6 and googletrans library.  
+It uses `PySide6` and `googletrans` library.  
 Program is compiled to .exe (located in `dist/multitranslator/MultiTranslator.exe`)  
 
 
